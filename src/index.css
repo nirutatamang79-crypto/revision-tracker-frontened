@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #0d0c0b;
+    color: #ede8e0;
+    font-family: 'JetBrains Mono', monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: #e8a234; color: #0d0c0b; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-amber text-ink font-mono font-medium px-4 py-2 text-sm
+           hover:bg-[#f0b347] active:scale-95 transition-all duration-150;
+  }
+  .btn-ghost {
+    @apply border border-border text-muted font-mono text-sm px-4 py-2
+           hover:border-warm hover:text-warm transition-all duration-150;
+  }
+  .card {
+    @apply bg-card border border-border p-5 transition-all duration-200
+           hover:border-[#3d3428];
+  }
+  .tag-pill {
+    @apply bg-[#231f1a] border border-border text-muted text-xs font-mono px-2 py-0.5;
+  }
+  .stage-dot {
+    @apply w-2.5 h-2.5 rounded-full transition-all duration-300;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.3s ease forwards; }
