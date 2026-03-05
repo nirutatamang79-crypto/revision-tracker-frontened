@@ -68,26 +68,3 @@ export default function AddTopicModal({ onClose, onAdd }) {
     </div>
   );
 }
-```
-
----
-
-That's every file. Here's the folder structure to create in each GitHub repo:
-
-**Backend** (4 files, all in root):
-`package.json` · `db.js` · `index.js` · `.env.example`
-
-**Frontend** (9 files across folders):
-```
-index.html
-package.json
-vite.config.js
-tailwind.config.js
-postcss.config.js
-src/index.css
-src/main.jsx
-src/api.js
-src/App.jsx
-src/components/LiveClock.jsx
-src/components/TopicCard.jsx
-src/components/AddTopicModal.jsx
